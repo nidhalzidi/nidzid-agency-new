@@ -95,13 +95,13 @@ export default function FAQ() {
         {/* Contact CTA */}
         <div className="mt-12 text-center">
           <p className="text-gray-600 mb-4">
-            {isRTL ? 'لا تزال لديك أسئلة؟ نحن هنا للمساعدة!' : "Still have questions? We're here to help!"}
+            {t('faq.cta')}
           </p>
           <a
             href="#contact"
             className={`inline-flex items-center gap-2 px-6 py-3 bg-[#1B4332] hover:bg-[#2D6A4F] text-white font-semibold rounded-lg transition-colors ${isRTL ? 'flex-row-reverse' : ''}`}
           >
-            {isRTL ? 'تواصل مع فريقنا' : 'Contact Our Team'}
+            {t('faq.ctaButton')}
           </a>
         </div>
       </div>

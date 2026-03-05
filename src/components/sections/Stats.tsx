@@ -61,28 +61,28 @@ export default function Stats() {
       value: 500,
       suffix: '+',
       label: t('stats.influencers'),
-      description: isRTL ? 'صانعو محتوى موثقون عبر المنصات' : 'Verified content creators across platforms'
+      description: t('stats.influencersDesc')
     },
     {
       icon: Globe2,
       value: 50,
       suffix: '+',
-      label: isRTL ? 'دولة وصلنا إليها' : 'Countries Reached',
-      description: isRTL ? 'تغطية سوق المستهلكين المسلمين العالمي' : 'Global Muslim consumer market coverage'
+      label: t('stats.countriesReached'),
+      description: t('stats.countriesDesc')
     },
     {
       icon: TrendingUp,
       value: 3.5,
       suffix: 'x',
-      label: isRTL ? 'متوسط العائد على الاستثمار' : 'Average ROI',
-      description: isRTL ? 'عائد على الاستثمار لعملائنا' : 'Return on investment for our clients'
+      label: t('stats.roi'),
+      description: t('stats.roiDesc')
     },
     {
       icon: Award,
       value: 100,
       suffix: '+',
       label: t('stats.campaigns'),
-      description: isRTL ? 'تسويق متوافق مع الشريعة تم تسليمه' : 'Shariah-compliant marketing delivered'
+      description: t('stats.campaignsDesc')
     },
   ]
 
@@ -98,16 +98,13 @@ export default function Stats() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-[#D4AF37] text-sm font-medium mb-4">
-            {isRTL ? 'تأثيرنا' : 'Our Impact'}
+            {t('stats.badge')}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-            {isRTL ? 'أرقام تتحدث' : 'Numbers That Speak'}
+            {t('stats.title')}
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            {isRTL 
-              ? 'ساعدنا العلامات التجارية على التواصل مع ملايين المستهلكين المسلمين من خلال حملات تسويق أصيلة ومتوافقة مع الشريعة.'
-              : "We've helped brands connect with millions of Muslim consumers through authentic, Shariah-compliant marketing campaigns."
-            }
+            {t('stats.subtitle')}
           </p>
         </div>
 
@@ -137,7 +134,7 @@ export default function Stats() {
           <div className="inline-flex items-center gap-4 px-8 py-4 rounded-full bg-white/10 border border-white/20">
             <span className="text-[#D4AF37] text-2xl">🏆</span>
             <span className="text-white font-semibold">
-              {isRTL ? 'موثوق من العلامات الحلال الرائدة عالمياً' : 'Trusted by Leading Halal Brands Worldwide'}
+              {t('stats.trustBadge')}
             </span>
           </div>
         </div>

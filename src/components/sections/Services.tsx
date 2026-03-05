@@ -13,41 +13,25 @@ export default function Services() {
       icon: Megaphone,
       titleKey: 'services.influencerMarketing.title',
       descriptionKey: 'services.influencerMarketing.description',
-      features: [
-        isRTL ? 'اكتشاف المؤثرين' : 'Influencer Sourcing',
-        isRTL ? 'إدارة الحملات' : 'Campaign Management',
-        isRTL ? 'تتبع الأداء' : 'Performance Tracking',
-      ],
+      featuresKeys: ['services.features.influencerSourcing', 'services.features.campaignManagement', 'services.features.performanceTracking'],
     },
     {
       icon: Target,
       titleKey: 'services.paidAdvertising.title',
       descriptionKey: 'services.paidAdvertising.description',
-      features: [
-        isRTL ? 'وضع إعلانات الحلال' : 'Halal Ad Placement',
-        isRTL ? 'استهداف الجمهور' : 'Audience Targeting',
-        isRTL ? 'تحسين العائد' : 'ROI Optimization',
-      ],
+      featuresKeys: ['services.features.halalAdPlacement', 'services.features.audienceTargeting', 'services.features.roiOptimization'],
     },
     {
       icon: PenTool,
       titleKey: 'services.contentMarketing.title',
       descriptionKey: 'services.contentMarketing.description',
-      features: [
-        isRTL ? 'استراتيجية المحتوى' : 'Content Strategy',
-        isRTL ? 'الإنتاج الإبداعي' : 'Creative Production',
-        isRTL ? 'إدارة المجتمع' : 'Community Management',
-      ],
+      featuresKeys: ['services.features.contentStrategy', 'services.features.creativeProduction', 'services.features.communityManagement'],
     },
     {
       icon: TrendingUp,
       titleKey: 'services.brandStrategy.title',
       descriptionKey: 'services.brandStrategy.description',
-      features: [
-        isRTL ? 'بحوث السوق' : 'Market Research',
-        isRTL ? 'تموضع العلامة' : 'Brand Positioning',
-        isRTL ? 'تخطيط النمو' : 'Growth Planning',
-      ],
+      featuresKeys: ['services.features.marketResearch', 'services.features.brandPositioning', 'services.features.growthPlanning'],
     },
   ]
 
@@ -92,13 +76,13 @@ export default function Services() {
 
                 {/* Features */}
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
+                  {service.featuresKeys.map((featureKey, idx) => (
                     <li
                       key={idx}
                       className={`flex items-center gap-2 text-sm text-gray-700 ${isRTL ? 'flex-row-reverse justify-start' : ''}`}
                     >
                       <span className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full" />
-                      {feature}
+                      {t(featureKey)}
                     </li>
                   ))}
                 </ul>

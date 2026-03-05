@@ -15,28 +15,28 @@ export default function HowItWorks() {
       icon: MessageSquare,
       titleKey: 'howItWorks.step1.title',
       descKey: 'howItWorks.step1.description',
-      duration: isRTL ? '30 دقيقة' : '30 min',
+      durationKey: 'howItWorks.step1.duration',
     },
     {
       number: '02',
       icon: Search,
       titleKey: 'howItWorks.step2.title',
       descKey: 'howItWorks.step2.description',
-      duration: isRTL ? '1-2 أسبوع' : '1-2 weeks',
+      durationKey: 'howItWorks.step2.duration',
     },
     {
       number: '03',
       icon: Users,
       titleKey: 'howItWorks.step3.title',
       descKey: 'howItWorks.step3.description',
-      duration: isRTL ? '2-8 أسابيع' : '2-8 weeks',
+      durationKey: 'howItWorks.step3.duration',
     },
     {
       number: '04',
       icon: BarChart,
       titleKey: 'howItWorks.step4.title',
       descKey: 'howItWorks.step4.description',
-      duration: isRTL ? 'مستمر' : 'Ongoing',
+      durationKey: 'howItWorks.step4.duration',
     },
   ]
 
@@ -72,7 +72,7 @@ export default function HowItWorks() {
                         {step.number}
                       </span>
                       <span className="text-xs px-2 py-1 bg-[#1B4332]/10 text-[#1B4332] rounded-full font-medium">
-                        {step.duration}
+                        {t(step.durationKey)}
                       </span>
                     </div>
 
