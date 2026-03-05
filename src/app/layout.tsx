@@ -96,4 +96,4 @@ export default function RootLayout({
     </html>
   );
 }
-// Force redeploy - Thu Mar  5 06:19:38 UTC 2026
+// Force redeploy v2 - updated translations - Thu Mar  5 06:19:38 UTC 2026
