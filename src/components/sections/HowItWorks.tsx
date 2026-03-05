@@ -107,13 +107,13 @@ export default function HowItWorks() {
         {/* CTA */}
         <div className="text-center mt-16">
           <p className="text-gray-600 mb-4">
-            {isRTL ? 'هل أنت مستعد لبدء رحلة تسويق المؤثرين الحلال؟' : 'Ready to start your halal influencer marketing journey?'}
+            {t('howItWorks.cta')}
           </p>
           <Link
             href="#contact"
             className={`inline-flex items-center gap-2 px-8 py-4 bg-[#1B4332] hover:bg-[#2D6A4F] text-white font-semibold rounded-lg transition-colors ${isRTL ? 'flex-row-reverse' : ''}`}
           >
-            {isRTL ? 'جدول مكالمة الاكتشاف المجانية' : 'Schedule Your Free Discovery Call'}
+            {t('howItWorks.ctaButton')}
             <ArrowRight className={`h-5 w-5 ${isRTL ? 'rotate-180' : ''}`} />
           </Link>
         </div>

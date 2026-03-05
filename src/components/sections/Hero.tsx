@@ -15,6 +15,13 @@ export default function Hero() {
     { icon: Globe2, text: isRTL ? '+50 دولة' : '50+ Countries' },
   ]
 
+  const heroFeatures = [
+    { icon: '✓', text: isRTL ? 'مؤثرون معتمدون' : 'Verified Influencers' },
+    { icon: '✓', text: isRTL ? 'محتوى أصيل' : 'Authentic Content' },
+    { icon: '✓', text: isRTL ? 'حملات أخلاقية' : 'Ethical Campaigns' },
+    { icon: '✓', text: isRTL ? 'توافق الحلال' : 'Halal Compliance' },
+  ]
+
   return (
     <section className={`relative min-h-screen flex items-center pt-28 lg:pt-32 bg-gradient-to-br from-white via-gray-50 to-[#1B4332]/5 overflow-hidden ${isRTL ? 'rtl' : 'ltr'}`}>
       {/* Background Pattern */}
@@ -124,12 +131,7 @@ export default function Hero() {
                 
                 {/* Features */}
                 <div className="grid grid-cols-2 gap-4 text-left max-w-xs mx-auto">
-                  {[
-                    { icon: '✓', text: isRTL ? 'مؤثرون معتمدون' : 'Verified Influencers' },
-                    { icon: '✓', text: isRTL ? 'محتوى أصيل' : 'Authentic Content' },
-                    { icon: '✓', text: isRTL ? 'حملات أخلاقية' : 'Ethical Campaigns' },
-                    { icon: '✓', text: isRTL ? 'توافق الحلال' : 'Halal Compliance' },
-                  ].map((item, i) => (
+                  {heroFeatures.map((item, i) => (
                     <div key={i} className={`flex items-center gap-2 text-sm ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                       <span className="text-[#D4AF37]">{item.icon}</span>
                       <span>{item.text}</span>
