@@ -6,55 +6,54 @@ import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react'
 import { useLanguage } from '@/lib/i18n/context'
 
 export default function Testimonials() {
-  const { t, language } = useLanguage()
+  const { language } = useLanguage()
   const isRTL = language === 'ar'
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const testimonials = [
     {
-      nameKey: 'testimonials.items.0.name',
-      roleKey: 'testimonials.items.0.role',
-      companyKey: 'testimonials.items.0.company',
-      locationKey: 'testimonials.items.0.location',
+      name: isRTL ? 'أحمد الراشد' : 'Ahmed Al-Rashid',
+      role: isRTL ? 'مدير التسويق' : 'Marketing Director',
+      company: isRTL ? 'النور للتمويل الإسلامي' : 'Al-Noor Islamic Finance',
+      location: isRTL ? 'دبي، الإمارات' : 'Dubai, UAE',
       image: '👨‍💼',
       rating: 5,
-      textKey: 'testimonials.items.0.text',
+      text: isRTL 
+        ? 'حوّلت وكالة نضال زيد نهجنا في التعامل مع المستهلكين المسلمين. فهمهم العميق للقيم الإسلامية وشراكات المؤثرين الأصيلة ساعدتنا على الوصول إلى جمهورنا المستهدف بفعالية. تجاوز عائد الاستثمار في حملتنا التوقعات بنسبة 200%.'
+        : "NidZid Agency transformed our approach to Muslim consumers. Their deep understanding of Islamic values and authentic influencer partnerships helped us reach our target audience effectively. Our campaign ROI exceeded expectations by 200%.",
     },
     {
-      nameKey: 'testimonials.items.1.name',
-      roleKey: 'testimonials.items.1.role',
-      companyKey: 'testimonials.items.1.company',
-      locationKey: 'testimonials.items.1.location',
+      name: isRTL ? 'فاطمة حسن' : 'Fatima Hassan',
+      role: isRTL ? 'مديرة العلامة' : 'Brand Manager',
+      company: isRTL ? 'الأغذية الحلال الدولية' : 'Halal Foods International',
+      location: isRTL ? 'لندن، بريطانيا' : 'London, UK',
       image: '👩‍💼',
       rating: 5,
-      textKey: 'testimonials.items.1.text',
+      text: isRTL
+        ? 'العمل مع نضال زيد كان نقطة تحول لعلامتنا الغذائية الحلال. ربطونا بمؤثري الطعام المسلمين الذين يحبون منتجاتنا بصدق. الأصالة في محتواهم دفعت المشاركة والمبيعات الحقيقية.'
+        : "Working with NidZid was a game-changer for our halal food brand. They connected us with Muslim food influencers who genuinely love our products. The authenticity in their content drove real engagement and sales.",
     },
     {
-      nameKey: 'testimonials.items.2.name',
-      roleKey: 'testimonials.items.2.role',
-      companyKey: 'testimonials.items.2.company',
-      locationKey: 'testimonials.items.2.location',
+      name: isRTL ? 'عمر إبراهيم' : 'Omar Ibrahim',
+      role: isRTL ? 'الرئيس التنفيذي' : 'CEO',
+      company: isRTL ? 'شركة الموضة المحتشمة' : 'Modest Fashion Co.',
+      location: isRTL ? 'كوالالمبور، ماليزيا' : 'Kuala Lumpur, Malaysia',
       image: '👨‍💼',
       rating: 5,
-      textKey: 'testimonials.items.2.text',
+      text: isRTL
+        ? 'فريق نضال زيد يفهم سوق الموضة المحتشمة مثل لا أحد غيرهم. ساعدونا على بناء علاقات أصيلة مع مؤثرات الحجاب اللواتي يمثلن قيم علامتنا بصدق. زادت المبيعات بنسبة 150% في 3 أشهر.'
+        : "The team at NidZid understands the modest fashion market like no other. They helped us build authentic relationships with hijabi influencers who truly represent our brand values. Sales increased by 150% in 3 months.",
     },
     {
-      nameKey: 'testimonials.items.3.name',
-      roleKey: 'testimonials.items.3.role',
-      companyKey: 'testimonials.items.3.company',
-      locationKey: 'testimonials.items.3.location',
+      name: isRTL ? 'سارة محمد' : 'Sarah Mohamed',
+      role: isRTL ? 'قائدة التسويق الرقمي' : 'Digital Marketing Lead',
+      company: isRTL ? 'محور السفر الإسلامي' : 'Muslim Travel Hub',
+      location: isRTL ? 'إسطنبول، تركيا' : 'Istanbul, Turkey',
       image: '👩‍💼',
       rating: 5,
-      textKey: 'testimonials.items.3.text',
-    },
-    {
-      nameKey: 'testimonials.items.4.name',
-      roleKey: 'testimonials.items.4.role',
-      companyKey: 'testimonials.items.4.company',
-      locationKey: 'testimonials.items.4.location',
-      image: '👨‍💼',
-      rating: 5,
-      textKey: 'testimonials.items.4.text',
+      text: isRTL
+        ? 'خبرة نضال زيد في تسويق السفر الإسلامي استثنائية. وجدوا مؤثرين يمكنهم عرض الوجهات الصديقة للحلال بأصالة. تضاعفت معدلات حجزنا خلال الربع الأول من حملتنا.'
+        : "NidZid's expertise in Muslim travel marketing is exceptional. They found influencers who could authentically showcase halal-friendly destinations. Our booking rates doubled within the first quarter of our campaign.",
     },
   ]
 
@@ -67,18 +66,21 @@ export default function Testimonials() {
   }
 
   return (
-    <section className={`py-20 lg:py-28 bg-white ${isRTL ? 'rtl' : 'ltr'}`}>
+    <section id="testimonials" className={`py-20 lg:py-28 bg-gray-50 ${isRTL ? 'rtl' : 'ltr'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] text-sm font-medium mb-4">
-            {t('testimonials.badge')}
+            {isRTL ? 'الشهادات' : 'Testimonials'}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-[#1B4332] mb-4">
-            {t('testimonials.title')}
+            {isRTL ? 'ماذا يقول عملاؤنا' : 'What Our Clients Say'}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {t('testimonials.subtitle')}
+            {isRTL 
+              ? 'اسمع من العلامات التجارية التي تواصلت بنجاح مع المستهلكين المسلمين من خلال حملات تسويق المؤثرين الحلال.'
+              : 'Hear from brands that have successfully connected with Muslim consumers through our halal influencer marketing campaigns.'
+            }
           </p>
         </div>
 
@@ -100,7 +102,7 @@ export default function Testimonials() {
 
               {/* Testimonial Text */}
               <p className={`text-lg lg:text-xl text-gray-700 leading-relaxed mb-8 ${isRTL ? 'text-right' : ''}`}>
-                "{t(testimonials[currentIndex].textKey)}"
+                "{testimonials[currentIndex].text}"
               </p>
 
               {/* Author Info */}
@@ -110,13 +112,13 @@ export default function Testimonials() {
                 </div>
                 <div className={isRTL ? 'text-right' : ''}>
                   <div className="font-bold text-[#1B4332] text-lg">
-                    {t(testimonials[currentIndex].nameKey)}
+                    {testimonials[currentIndex].name}
                   </div>
                   <div className="text-gray-600">
-                    {t(testimonials[currentIndex].roleKey)} {t('testimonials.at')} {t(testimonials[currentIndex].companyKey)}
+                    {testimonials[currentIndex].role} {isRTL ? 'في' : 'at'} {testimonials[currentIndex].company}
                   </div>
                   <div className="text-sm text-gray-500">
-                    📍 {t(testimonials[currentIndex].locationKey)}
+                    📍 {testimonials[currentIndex].location}
                   </div>
                 </div>
               </div>

@@ -3,83 +3,59 @@
 import { useLanguage } from '@/lib/i18n/context'
 
 export default function Partners() {
-  const { t, language } = useLanguage()
+  const { language } = useLanguage()
   const isRTL = language === 'ar'
 
   const partnerCategories = [
     {
-      titleKey: 'partners.categories.islamicFinance.title',
+      title: isRTL ? 'التمويل الإسلامي' : 'Islamic Finance',
       icon: '🏦',
-      partnersKeys: [
-        'partners.categories.islamicFinance.partners.0',
-        'partners.categories.islamicFinance.partners.1',
-        'partners.categories.islamicFinance.partners.2',
-        'partners.categories.islamicFinance.partners.3',
-        'partners.categories.islamicFinance.partners.4',
-      ]
+      partners: isRTL 
+        ? ['مصرف الراجحي', 'بنك فيصل الإسلامي', 'واحد للاستثمار', 'إيثيس للتقنية', 'بلوسوم للتمويل']
+        : ['Al Rayan Bank', 'Gatehouse Bank', 'Wahed Invest', 'Ethis Technologies', 'Blossom Finance']
     },
     {
-      titleKey: 'partners.categories.halalFood.title',
+      title: isRTL ? 'الغذاء والمشروبات الحلال' : 'Halal Food & Beverage',
       icon: '🍖',
-      partnersKeys: [
-        'partners.categories.halalFood.partners.0',
-        'partners.categories.halalFood.partners.1',
-        'partners.categories.halalFood.partners.2',
-        'partners.categories.halalFood.partners.3',
-        'partners.categories.halalFood.partners.4',
-      ]
+      partners: isRTL
+        ? ['ذا حلال جايز', 'طريق الزعفران', 'ميدامار للأغذية', 'علامات حلال معتمدة', 'ون ستوب حلال']
+        : ['Halal Guys', 'Saffron Road', 'Midamar Foods', 'Halal Certified Brands', 'One Stop Halal']
     },
     {
-      titleKey: 'partners.categories.modestFashion.title',
+      title: isRTL ? 'الموضة المحتشمة' : 'Modest Fashion',
       icon: '👗',
-      partnersKeys: [
-        'partners.categories.modestFashion.partners.0',
-        'partners.categories.modestFashion.partners.1',
-        'partners.categories.modestFashion.partners.2',
-        'partners.categories.modestFashion.partners.3',
-        'partners.categories.modestFashion.partners.4',
-      ]
+      partners: isRTL
+        ? ['مودانيسا', 'هاوت حجاب', 'مجموعة عاب', 'شكر للملابس', 'آنا حريري']
+        : ['Modanisa', 'Haute Hijab', 'Aab Collection', 'Shukr Clothing', 'Annah Hariri']
     },
     {
-      titleKey: 'partners.categories.muslimTravel.title',
+      title: isRTL ? 'السفر الإسلامي' : 'Muslim Travel',
       icon: '✈️',
-      partnersKeys: [
-        'partners.categories.muslimTravel.partners.0',
-        'partners.categories.muslimTravel.partners.1',
-        'partners.categories.muslimTravel.partners.2',
-        'partners.categories.muslimTravel.partners.3',
-        'partners.categories.muslimTravel.partners.4',
-      ]
+      partners: isRTL
+        ? ['رحلة حلال', 'تقييم الهلال', 'فنادق صديقة للمسلمين', 'باقات العمرة', 'سلام للسفر']
+        : ['Halal Trip', 'Crescent Rating', 'Muslim Friendly Hotels', 'Umrah Packages Co.', 'Salam Travel']
     },
     {
-      titleKey: 'partners.categories.halalCosmetics.title',
+      title: isRTL ? 'مستحضرات التجميل الحلال' : 'Halal Cosmetics',
       icon: '💄',
-      partnersKeys: [
-        'partners.categories.halalCosmetics.partners.0',
-        'partners.categories.halalCosmetics.partners.1',
-        'partners.categories.halalCosmetics.partners.2',
-        'partners.categories.halalCosmetics.partners.3',
-        'partners.categories.halalCosmetics.partners.4',
-      ]
+      partners: isRTL
+        ? ['سام بيور مينرالز', 'بي إتش بي للجمال الأخلاقي', 'جمال حلال', 'إيبا للعناية الحلال', 'وردة لمستحضرات التجميل']
+        : ['Sampure Minerals', 'PHB Ethical Beauty', 'Halal Beauty', 'Iba Halal Care', 'Wardah Cosmetics']
     },
     {
-      titleKey: 'partners.categories.islamicEducation.title',
+      title: isRTL ? 'التعليم الإسلامي' : 'Islamic Education',
       icon: '📚',
-      partnersKeys: [
-        'partners.categories.islamicEducation.partners.0',
-        'partners.categories.islamicEducation.partners.1',
-        'partners.categories.islamicEducation.partners.2',
-        'partners.categories.islamicEducation.partners.3',
-        'partners.categories.islamicEducation.partners.4',
-      ]
+      partners: isRTL
+        ? ['أكاديمية القرآن', 'الجامعة الإسلامية المفتوحة', 'معهد باينة', 'التعليم الإسلامي', 'تطبيق مسلم برو']
+        : ['Quran Academy', 'Islamic Online University', 'Bayyinah Institute', 'Islamic Learning', 'Muslim Pro App']
     },
   ]
 
   const trustIndicators = [
-    { value: '100+', labelKey: 'partners.trustIndicators.brandPartners' },
-    { value: '25+', labelKey: 'partners.trustIndicators.countriesServed' },
-    { value: '$10M+', labelKey: 'partners.trustIndicators.revenueGenerated' },
-    { value: '50M+', labelKey: 'partners.trustIndicators.audienceReached' },
+    { value: '100+', label: isRTL ? 'شريك علامة تجارية' : 'Brand Partners' },
+    { value: '25+', label: isRTL ? 'دولة نخدمها' : 'Countries Served' },
+    { value: '$10M+', label: isRTL ? 'إيرادات محققة' : 'Revenue Generated' },
+    { value: '50M+', label: isRTL ? 'جمهور تم الوصول إليه' : 'Audience Reached' },
   ]
 
   return (
@@ -88,13 +64,16 @@ export default function Partners() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] text-sm font-medium mb-4">
-            {t('partners.badge')}
+            {isRTL ? 'شركاء موثوقون' : 'Trusted Partners'}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-[#1B4332] mb-4">
-            {t('partners.title')}
+            {isRTL ? 'العلامات التي عملنا معها' : 'Brands We\'ve Worked With'}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {t('partners.subtitle')}
+            {isRTL 
+              ? 'تشاركنا مع علامات حلال رائدة عبر الصناعات لإنشاء حملات مؤثرة تتواصل مع المستهلكين المسلمين.'
+              : 'We\'ve partnered with leading halal brands across industries to create impactful campaigns that resonate with Muslim consumers.'
+            }
           </p>
         </div>
 
@@ -109,16 +88,16 @@ export default function Partners() {
               <div className={`flex items-center gap-3 mb-4 ${isRTL ? 'flex-row-reverse justify-start' : ''}`}>
                 <span className="text-3xl">{category.icon}</span>
                 <h3 className={`font-bold text-[#1B4332] text-lg ${isRTL ? 'text-right' : ''}`}>
-                  {t(category.titleKey)}
+                  {category.title}
                 </h3>
               </div>
 
               {/* Partners List */}
               <ul className="space-y-2">
-                {category.partnersKeys.map((partnerKey, idx) => (
+                {category.partners.map((partner, idx) => (
                   <li key={idx} className={`flex items-center gap-2 text-gray-600 text-sm ${isRTL ? 'flex-row-reverse justify-start text-right' : ''}`}>
                     <span className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full flex-shrink-0" />
-                    {t(partnerKey)}
+                    {partner}
                   </li>
                 ))}
               </ul>
@@ -131,7 +110,7 @@ export default function Partners() {
           {trustIndicators.map((indicator, index) => (
             <div key={index} className="text-center p-6 rounded-xl bg-[#1B4332]/5">
               <div className="text-3xl font-bold text-[#D4AF37] mb-2">{indicator.value}</div>
-              <div className="text-sm text-gray-600">{t(indicator.labelKey)}</div>
+              <div className="text-sm text-gray-600">{indicator.label}</div>
             </div>
           ))}
         </div>
@@ -139,13 +118,16 @@ export default function Partners() {
         {/* CTA */}
         <div className="mt-16 text-center">
           <p className="text-gray-600 mb-6">
-            {t('partners.cta')}
+            {isRTL 
+              ? 'هل أنت مستعد للانضمام إلى قائمة شراكاتنا الناجحة؟'
+              : 'Ready to join our growing list of successful brand partnerships?'
+            }
           </p>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#D4AF37] hover:bg-[#B8942C] text-[#1B4332] font-semibold rounded-lg transition-colors"
           >
-            {t('partners.ctaButton')}
+            {isRTL ? 'ابدأ حملتك اليوم' : 'Start Your Campaign Today'}
           </a>
         </div>
       </div>

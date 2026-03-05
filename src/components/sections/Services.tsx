@@ -1,7 +1,7 @@
 'use client'
 
 import { Card, CardContent } from '@/components/ui/card'
-import { Megaphone, Target, PenTool, TrendingUp, CheckCircle } from 'lucide-react'
+import { Megaphone, Target, PenTool, TrendingUp } from 'lucide-react'
 import { useLanguage } from '@/lib/i18n/context'
 
 export default function Services() {
@@ -11,27 +11,43 @@ export default function Services() {
   const services = [
     {
       icon: Megaphone,
-      titleKey: 'services.influencerMarketing.title',
-      descriptionKey: 'services.influencerMarketing.description',
-      featuresKeys: ['services.features.influencerSourcing', 'services.features.campaignManagement', 'services.features.performanceTracking'],
+      title: t('services.influencerMarketing.title'),
+      description: isRTL 
+        ? 'شرك مع مؤثرين مسلمين أصيلين يتواصلون بصدق مع جمهورك المستهدف. من المؤثرين الصغار إلى الكبار عبر Instagram وTikTok وYouTube والمزيد.'
+        : 'Partner with authentic Muslim influencers who genuinely connect with your target audience. From micro to mega influencers across Instagram, TikTok, YouTube, and more.',
+      features: isRTL 
+        ? ['اكتشاف المؤثرين', 'إدارة الحملات', 'تتبع الأداء']
+        : ['Influencer Sourcing', 'Campaign Management', 'Performance Tracking'],
     },
     {
       icon: Target,
-      titleKey: 'services.paidAdvertising.title',
-      descriptionKey: 'services.paidAdvertising.description',
-      featuresKeys: ['services.features.halalAdPlacement', 'services.features.audienceTargeting', 'services.features.roiOptimization'],
+      title: t('services.paidAdvertising.title'),
+      description: isRTL
+        ? 'الوصول إلى المستهلكين المسلمين من خلال حملات إعلانية حلال مستهدفة. نضمن ظهور إعلاناتك في سياقات مناسبة تتوافق مع القيم الإسلامية.'
+        : 'Reach Muslim consumers through targeted halal advertising campaigns. We ensure your ads appear in appropriate contexts that align with Islamic values.',
+      features: isRTL
+        ? ['وضع إعلانات الحلال', 'استهداف الجمهور', 'تحسين العائد']
+        : ['Halal Ad Placement', 'Audience Targeting', 'ROI Optimization'],
     },
     {
       icon: PenTool,
-      titleKey: 'services.contentMarketing.title',
-      descriptionKey: 'services.contentMarketing.description',
-      featuresKeys: ['services.features.contentStrategy', 'services.features.creativeProduction', 'services.features.communityManagement'],
+      title: t('services.contentMarketing.title'),
+      description: isRTL
+        ? 'إنشاء محتوى مقنع وذو صلة ثقافية يتردد صداه مع الجماهير المسلمة. من محتوى وسائل التواصل الاجتماعي إلى منشورات المدونات وإنتاج الفيديو.'
+        : 'Create compelling, culturally-relevant content that resonates with Muslim audiences. From social media content to blog posts and video production.',
+      features: isRTL
+        ? ['استراتيجية المحتوى', 'الإنتاج الإبداعي', 'إدارة المجتمع']
+        : ['Content Strategy', 'Creative Production', 'Community Management'],
     },
     {
       icon: TrendingUp,
-      titleKey: 'services.brandStrategy.title',
-      descriptionKey: 'services.brandStrategy.description',
-      featuresKeys: ['services.features.marketResearch', 'services.features.brandPositioning', 'services.features.growthPlanning'],
+      title: t('services.brandStrategy.title'),
+      description: isRTL
+        ? 'تطوير استراتيجية تسويق حلال شاملة تضع علامتك في موقع النجاح في سوق المستهلكين المسلمين العالمي.'
+        : 'Develop a comprehensive halal marketing strategy that positions your brand for success in the global Muslim consumer market.',
+      features: isRTL
+        ? ['بحوث السوق', 'تموضع العلامة', 'تخطيط النمو']
+        : ['Market Research', 'Brand Positioning', 'Growth Planning'],
     },
   ]
 
@@ -44,10 +60,13 @@ export default function Services() {
             {t('services.badge')}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-[#1B4332] mb-4">
-            {t('services.title')}
+            {isRTL ? 'حلول تسويق حلال كاملة' : 'Complete Halal Marketing Solutions'}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {t('services.subtitle')}
+            {isRTL 
+              ? 'نقدم خدمات تسويق شاملة مصممة خصيصاً للعلامات التجارية التي تستهدف سوق المستهلكين المسلمين.'
+              : 'We offer comprehensive marketing services tailored specifically for brands targeting the Muslim consumer market.'
+            }
           </p>
         </div>
 
@@ -66,23 +85,23 @@ export default function Services() {
 
                 {/* Title */}
                 <h3 className="text-xl font-bold text-[#1B4332] mb-3">
-                  {t(service.titleKey)}
+                  {service.title}
                 </h3>
 
                 {/* Description */}
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  {t(service.descriptionKey)}
+                  {service.description}
                 </p>
 
                 {/* Features */}
                 <ul className="space-y-2">
-                  {service.featuresKeys.map((featureKey, idx) => (
+                  {service.features.map((feature, idx) => (
                     <li
                       key={idx}
                       className={`flex items-center gap-2 text-sm text-gray-700 ${isRTL ? 'flex-row-reverse justify-start' : ''}`}
                     >
                       <span className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full" />
-                      {t(featureKey)}
+                      {feature}
                     </li>
                   ))}
                 </ul>
