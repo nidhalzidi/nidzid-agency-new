@@ -10,83 +10,83 @@ export default function Industries() {
   const industries = [
     {
       icon: '🏦',
-      title: isRTL ? 'التمويل الإسلامي' : 'Islamic Finance',
-      description: isRTL 
-        ? 'تواصل مع المستهلكين المسلمين الباحثين عن منتجات مصرفية وتأمينية واستثمارية متوافقة مع الشريعة.'
-        : 'Connect with Muslim consumers seeking Shariah-compliant banking, insurance, and investment products.',
-      examples: isRTL 
-        ? ['البنوك الإسلامية', 'تكافل', 'استثمارات حلال']
-        : ['Islamic Banks', 'Takaful Insurance', 'Halal Investments'],
+      title: t('industries.items.islamicFinance.title'),
+      description: t('industries.items.islamicFinance.description'),
+      examples: [
+        t('industries.examples.islamicBanks'),
+        t('industries.examples.takaful'),
+        t('industries.examples.halalInvestments')
+      ],
     },
     {
       icon: '🍖',
-      title: isRTL ? 'الغذاء والمشروبات الحلال' : 'Halal Food & Beverage',
-      description: isRTL
-        ? 'روّج لمنتجات الغذاء الحلال المعتمدة والمطاعم وخدمات التوصيل للمستهلكين المسلمين الواعين.'
-        : 'Promote halal-certified food products, restaurants, and delivery services to conscious Muslim consumers.',
-      examples: isRTL
-        ? ['مطاعم حلال', 'منتجات غذائية', 'توصيل وجبات']
-        : ['Halal Restaurants', 'Food Products', 'Meal Delivery'],
+      title: t('industries.items.halalFood.title'),
+      description: t('industries.items.halalFood.description'),
+      examples: [
+        t('industries.examples.halalRestaurants'),
+        t('industries.examples.foodProducts'),
+        t('industries.examples.mealDelivery')
+      ],
     },
     {
       icon: '👗',
-      title: isRTL ? 'الموضة المحتشمة' : 'Modest Fashion',
-      description: isRTL
-        ? 'اعرض ماركات الحجاب والعباءة والملابس المحتشمة للنساء والرجال المهتمين بالموضة.'
-        : 'Showcase hijab, abaya, and modest clothing brands to fashion-conscious Muslim women and men.',
-      examples: isRTL
-        ? ['ماركات حجاب', 'ملابس محتشمة', 'أزياء إسلامية']
-        : ['Hijab Brands', 'Modest Wear', 'Islamic Fashion'],
+      title: t('industries.items.modestFashion.title'),
+      description: t('industries.items.modestFashion.description'),
+      examples: [
+        t('industries.examples.hijabBrands'),
+        t('industries.examples.modestWear'),
+        t('industries.examples.islamicFashion')
+      ],
     },
     {
       icon: '✈️',
-      title: isRTL ? 'السفر والسياحة الإسلامية' : 'Muslim Travel & Tourism',
-      description: isRTL
-        ? 'سوّق للوجهات والفنادق وباقات الرحلات الصديقة للحلال للمسافرين المسلمين حول العالم.'
-        : 'Market halal-friendly travel destinations, hotels, and tour packages to Muslim travelers worldwide.',
-      examples: isRTL
-        ? ['سياحة حلال', 'فنادق صديقة للمسلمين', 'باقات العمرة']
-        : ['Halal Tourism', 'Muslim-Friendly Hotels', 'Umrah Packages'],
+      title: t('industries.items.muslimTravel.title'),
+      description: t('industries.items.muslimTravel.description'),
+      examples: [
+        t('industries.examples.halalTourism'),
+        t('industries.examples.muslimFriendlyHotels'),
+        t('industries.examples.umrahPackages')
+      ],
     },
     {
       icon: '💄',
-      title: isRTL ? 'مستحضرات التجميل الحلال' : 'Halal Cosmetics',
-      description: isRTL
-        ? 'روّج لمستحضرات التجميل الحلال والنباتية للمستهلكين المسلمين الباحثين عن بدائل أخلاقية.'
-        : 'Promote halal-certified and vegan beauty products to Muslim consumers seeking ethical alternatives.',
-      examples: isRTL
-        ? ['مكياج حلال', 'صديق للوضوء', 'جمال طبيعي']
-        : ['Halal Makeup', 'Wudhu-Friendly', 'Natural Beauty'],
+      title: t('industries.items.halalCosmetics.title'),
+      description: t('industries.items.halalCosmetics.description'),
+      examples: [
+        t('industries.examples.halalMakeup'),
+        t('industries.examples.wudhuFriendly'),
+        t('industries.examples.naturalBeauty')
+      ],
     },
     {
       icon: '📚',
-      title: isRTL ? 'التعليم الإسلامي' : 'Islamic Education',
-      description: isRTL
-        ? 'الوصول إلى الأسر المسلمة الباحثة عن تعليم إسلامي عالي الجودة وتعلم القرآن واللغة العربية.'
-        : 'Reach Muslim families seeking quality Islamic education, Quran learning, and Arabic language programs.',
-      examples: isRTL
-        ? ['قرآن أونلاين', 'مدارس إسلامية', 'تعلم العربية']
-        : ['Online Quran', 'Islamic Schools', 'Arabic Learning'],
+      title: t('industries.items.islamicEducation.title'),
+      description: t('industries.items.islamicEducation.description'),
+      examples: [
+        t('industries.examples.onlineQuran'),
+        t('industries.examples.islamicSchools'),
+        t('industries.examples.arabicLearning')
+      ],
     },
     {
       icon: '🏥',
-      title: isRTL ? 'الرعاية الصحية الحلال' : 'Halal Healthcare',
-      description: isRTL
-        ? 'ربط المستهلكين المسلمين بالأدوية والمكملات الغذائية والخدمات الصحية المعتمدة حلال.'
-        : 'Connect Muslim consumers with halal-certified pharmaceuticals, supplements, and healthcare services.',
-      examples: isRTL
-        ? ['فيتامينات حلال', 'أطباء مسلمون', 'استشارات إسلامية']
-        : ['Halal Vitamins', 'Muslim Doctors', 'Islamic Counseling'],
+      title: t('industries.items.halalHealthcare.title'),
+      description: t('industries.items.halalHealthcare.description'),
+      examples: [
+        t('industries.examples.halalVitamins'),
+        t('industries.examples.muslimDoctors'),
+        t('industries.examples.islamicCounseling')
+      ],
     },
     {
       icon: '🏠',
-      title: isRTL ? 'نمط الحياة الإسلامي' : 'Islamic Lifestyle',
-      description: isRTL
-        ? 'سوّق لمنتجات المنزل الإسلامية وأدوات الصلاة وماركات نمط الحياة للأسر المسلمة.'
-        : 'Market Islamic home products, prayer essentials, and lifestyle brands to Muslim households.',
-      examples: isRTL
-        ? ['سجاد صلاة', 'ديكور إسلامي', 'أسرة مسلمة']
-        : ['Prayer Mats', 'Islamic Decor', 'Muslim Family'],
+      title: t('industries.items.islamicLifestyle.title'),
+      description: t('industries.items.islamicLifestyle.description'),
+      examples: [
+        t('industries.examples.prayerMats'),
+        t('industries.examples.islamicDecor'),
+        t('industries.examples.muslimFamily')
+      ],
     },
   ]
 
@@ -99,13 +99,10 @@ export default function Industries() {
             {t('industries.badge')}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-[#1B4332] mb-4">
-            {isRTL ? 'خبرة عبر قطاعات الحلال' : 'Expertise Across Halal Sectors'}
+            {t('industries.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {isRTL 
-              ? 'من التمويل الإسلامي إلى الموضة المحتشمة، لدينا خبرة عميقة في ربط العلامات التجارية بالمستهلكين المسلمين عبر صناعات متنوعة.'
-              : 'From Islamic finance to modest fashion, we have deep experience connecting brands with Muslim consumers across diverse industries.'
-            }
+            {t('industries.subtitle')}
           </p>
         </div>
 
@@ -150,15 +147,15 @@ export default function Industries() {
         <div className="mt-16 grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
             <div className="text-3xl lg:text-4xl font-bold text-[#D4AF37] mb-2">$2T+</div>
-            <div className="text-sm text-gray-600">{isRTL ? 'سوق الحلال العالمي' : 'Global Halal Market'}</div>
+            <div className="text-sm text-gray-600">{t('industries.marketStats.globalHalalMarket')}</div>
           </div>
           <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
             <div className="text-3xl lg:text-4xl font-bold text-[#D4AF37] mb-2">2B+</div>
-            <div className="text-sm text-gray-600">{isRTL ? 'مستهلك مسلم' : 'Muslim Consumers'}</div>
+            <div className="text-sm text-gray-600">{t('industries.marketStats.muslimConsumers')}</div>
           </div>
           <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
             <div className="text-3xl lg:text-4xl font-bold text-[#D4AF37] mb-2">11%</div>
-            <div className="text-sm text-gray-600">{isRTL ? 'معدل النمو السنوي' : 'Annual Growth Rate'}</div>
+            <div className="text-sm text-gray-600">{t('industries.marketStats.annualGrowth')}</div>
           </div>
         </div>
       </div>

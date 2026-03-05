@@ -12,42 +12,42 @@ export default function Services() {
     {
       icon: Megaphone,
       title: t('services.influencerMarketing.title'),
-      description: isRTL 
-        ? 'شرك مع مؤثرين مسلمين أصيلين يتواصلون بصدق مع جمهورك المستهدف. من المؤثرين الصغار إلى الكبار عبر Instagram وTikTok وYouTube والمزيد.'
-        : 'Partner with authentic Muslim influencers who genuinely connect with your target audience. From micro to mega influencers across Instagram, TikTok, YouTube, and more.',
-      features: isRTL 
-        ? ['اكتشاف المؤثرين', 'إدارة الحملات', 'تتبع الأداء']
-        : ['Influencer Sourcing', 'Campaign Management', 'Performance Tracking'],
+      description: t('services.influencerMarketing.description'),
+      features: [
+        t('services.features.influencerSourcing'),
+        t('services.features.campaignManagement'),
+        t('services.features.performanceTracking')
+      ],
     },
     {
       icon: Target,
       title: t('services.paidAdvertising.title'),
-      description: isRTL
-        ? 'الوصول إلى المستهلكين المسلمين من خلال حملات إعلانية حلال مستهدفة. نضمن ظهور إعلاناتك في سياقات مناسبة تتوافق مع القيم الإسلامية.'
-        : 'Reach Muslim consumers through targeted halal advertising campaigns. We ensure your ads appear in appropriate contexts that align with Islamic values.',
-      features: isRTL
-        ? ['وضع إعلانات الحلال', 'استهداف الجمهور', 'تحسين العائد']
-        : ['Halal Ad Placement', 'Audience Targeting', 'ROI Optimization'],
+      description: t('services.paidAdvertising.description'),
+      features: [
+        t('services.features.halalAdPlacement'),
+        t('services.features.audienceTargeting'),
+        t('services.features.roiOptimization')
+      ],
     },
     {
       icon: PenTool,
       title: t('services.contentMarketing.title'),
-      description: isRTL
-        ? 'إنشاء محتوى مقنع وذو صلة ثقافية يتردد صداه مع الجماهير المسلمة. من محتوى وسائل التواصل الاجتماعي إلى منشورات المدونات وإنتاج الفيديو.'
-        : 'Create compelling, culturally-relevant content that resonates with Muslim audiences. From social media content to blog posts and video production.',
-      features: isRTL
-        ? ['استراتيجية المحتوى', 'الإنتاج الإبداعي', 'إدارة المجتمع']
-        : ['Content Strategy', 'Creative Production', 'Community Management'],
+      description: t('services.contentMarketing.description'),
+      features: [
+        t('services.features.contentStrategy'),
+        t('services.features.creativeProduction'),
+        t('services.features.communityManagement')
+      ],
     },
     {
       icon: TrendingUp,
       title: t('services.brandStrategy.title'),
-      description: isRTL
-        ? 'تطوير استراتيجية تسويق حلال شاملة تضع علامتك في موقع النجاح في سوق المستهلكين المسلمين العالمي.'
-        : 'Develop a comprehensive halal marketing strategy that positions your brand for success in the global Muslim consumer market.',
-      features: isRTL
-        ? ['بحوث السوق', 'تموضع العلامة', 'تخطيط النمو']
-        : ['Market Research', 'Brand Positioning', 'Growth Planning'],
+      description: t('services.brandStrategy.description'),
+      features: [
+        t('services.features.marketResearch'),
+        t('services.features.brandPositioning'),
+        t('services.features.growthPlanning')
+      ],
     },
   ]
 
@@ -60,13 +60,10 @@ export default function Services() {
             {t('services.badge')}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-[#1B4332] mb-4">
-            {isRTL ? 'حلول تسويق حلال كاملة' : 'Complete Halal Marketing Solutions'}
+            {t('services.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {isRTL 
-              ? 'نقدم خدمات تسويق شاملة مصممة خصيصاً للعلامات التجارية التي تستهدف سوق المستهلكين المسلمين.'
-              : 'We offer comprehensive marketing services tailored specifically for brands targeting the Muslim consumer market.'
-            }
+            {t('services.subtitle')}
           </p>
         </div>
 

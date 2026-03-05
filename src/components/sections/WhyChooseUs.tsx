@@ -95,16 +95,16 @@ export default function WhyChooseUs() {
         <div className="mt-16 pt-12 border-t border-white/20">
           <div className="text-center mb-8">
             <p className="text-[#D4AF37] font-medium mb-4">
-              {isRTL ? 'موثوق من قادة الصناعة' : 'Trusted By Industry Leaders'}
+              {t('whyUs.trustedBy')}
             </p>
           </div>
           <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-16 opacity-60">
             {[
-              isRTL ? 'علامات الغذاء الحلال' : 'Halal Food Brands',
-              isRTL ? 'التمويل الإسلامي' : 'Islamic Finance',
-              isRTL ? 'الموضة المحتشمة' : 'Modest Fashion',
-              isRTL ? 'السفر الإسلامي' : 'Muslim Travel',
-              isRTL ? 'الإعلام الإسلامي' : 'Islamic Media'
+              t('industries.examples.halalRestaurants'),
+              t('industries.items.islamicFinance.title'),
+              t('industries.items.modestFashion.title'),
+              t('industries.items.muslimTravel.title'),
+              t('whyUs.islamicMedia')
             ].map((industry, idx) => (
               <div key={idx} className="text-white/80 font-semibold text-sm lg:text-base">
                 {industry}

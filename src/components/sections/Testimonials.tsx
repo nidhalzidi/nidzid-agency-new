@@ -6,54 +6,55 @@ import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react'
 import { useLanguage } from '@/lib/i18n/context'
 
 export default function Testimonials() {
-  const { language } = useLanguage()
+  const { t, language } = useLanguage()
   const isRTL = language === 'ar'
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const testimonials = [
     {
-      name: isRTL ? 'أحمد الراشد' : 'Ahmed Al-Rashid',
-      role: isRTL ? 'مدير التسويق' : 'Marketing Director',
-      company: isRTL ? 'النور للتمويل الإسلامي' : 'Al-Noor Islamic Finance',
-      location: isRTL ? 'دبي، الإمارات' : 'Dubai, UAE',
+      name: t('testimonials.items.0.name'),
+      role: t('testimonials.items.0.role'),
+      company: t('testimonials.items.0.company'),
+      location: t('testimonials.items.0.location'),
       image: '👨‍💼',
       rating: 5,
-      text: isRTL 
-        ? 'حوّلت وكالة نضال زيد نهجنا في التعامل مع المستهلكين المسلمين. فهمهم العميق للقيم الإسلامية وشراكات المؤثرين الأصيلة ساعدتنا على الوصول إلى جمهورنا المستهدف بفعالية. تجاوز عائد الاستثمار في حملتنا التوقعات بنسبة 200%.'
-        : "NidZid Agency transformed our approach to Muslim consumers. Their deep understanding of Islamic values and authentic influencer partnerships helped us reach our target audience effectively. Our campaign ROI exceeded expectations by 200%.",
+      text: t('testimonials.items.0.text'),
     },
     {
-      name: isRTL ? 'فاطمة حسن' : 'Fatima Hassan',
-      role: isRTL ? 'مديرة العلامة' : 'Brand Manager',
-      company: isRTL ? 'الأغذية الحلال الدولية' : 'Halal Foods International',
-      location: isRTL ? 'لندن، بريطانيا' : 'London, UK',
+      name: t('testimonials.items.1.name'),
+      role: t('testimonials.items.1.role'),
+      company: t('testimonials.items.1.company'),
+      location: t('testimonials.items.1.location'),
       image: '👩‍💼',
       rating: 5,
-      text: isRTL
-        ? 'العمل مع نضال زيد كان نقطة تحول لعلامتنا الغذائية الحلال. ربطونا بمؤثري الطعام المسلمين الذين يحبون منتجاتنا بصدق. الأصالة في محتواهم دفعت المشاركة والمبيعات الحقيقية.'
-        : "Working with NidZid was a game-changer for our halal food brand. They connected us with Muslim food influencers who genuinely love our products. The authenticity in their content drove real engagement and sales.",
+      text: t('testimonials.items.1.text'),
     },
     {
-      name: isRTL ? 'عمر إبراهيم' : 'Omar Ibrahim',
-      role: isRTL ? 'الرئيس التنفيذي' : 'CEO',
-      company: isRTL ? 'شركة الموضة المحتشمة' : 'Modest Fashion Co.',
-      location: isRTL ? 'كوالالمبور، ماليزيا' : 'Kuala Lumpur, Malaysia',
+      name: t('testimonials.items.2.name'),
+      role: t('testimonials.items.2.role'),
+      company: t('testimonials.items.2.company'),
+      location: t('testimonials.items.2.location'),
       image: '👨‍💼',
       rating: 5,
-      text: isRTL
-        ? 'فريق نضال زيد يفهم سوق الموضة المحتشمة مثل لا أحد غيرهم. ساعدونا على بناء علاقات أصيلة مع مؤثرات الحجاب اللواتي يمثلن قيم علامتنا بصدق. زادت المبيعات بنسبة 150% في 3 أشهر.'
-        : "The team at NidZid understands the modest fashion market like no other. They helped us build authentic relationships with hijabi influencers who truly represent our brand values. Sales increased by 150% in 3 months.",
+      text: t('testimonials.items.2.text'),
     },
     {
-      name: isRTL ? 'سارة محمد' : 'Sarah Mohamed',
-      role: isRTL ? 'قائدة التسويق الرقمي' : 'Digital Marketing Lead',
-      company: isRTL ? 'محور السفر الإسلامي' : 'Muslim Travel Hub',
-      location: isRTL ? 'إسطنبول، تركيا' : 'Istanbul, Turkey',
+      name: t('testimonials.items.3.name'),
+      role: t('testimonials.items.3.role'),
+      company: t('testimonials.items.3.company'),
+      location: t('testimonials.items.3.location'),
       image: '👩‍💼',
       rating: 5,
-      text: isRTL
-        ? 'خبرة نضال زيد في تسويق السفر الإسلامي استثنائية. وجدوا مؤثرين يمكنهم عرض الوجهات الصديقة للحلال بأصالة. تضاعفت معدلات حجزنا خلال الربع الأول من حملتنا.'
-        : "NidZid's expertise in Muslim travel marketing is exceptional. They found influencers who could authentically showcase halal-friendly destinations. Our booking rates doubled within the first quarter of our campaign.",
+      text: t('testimonials.items.3.text'),
+    },
+    {
+      name: t('testimonials.items.4.name'),
+      role: t('testimonials.items.4.role'),
+      company: t('testimonials.items.4.company'),
+      location: t('testimonials.items.4.location'),
+      image: '👨‍💼',
+      rating: 5,
+      text: t('testimonials.items.4.text'),
     },
   ]
 
@@ -71,16 +72,13 @@ export default function Testimonials() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] text-sm font-medium mb-4">
-            {isRTL ? 'الشهادات' : 'Testimonials'}
+            {t('testimonials.badge')}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-[#1B4332] mb-4">
-            {isRTL ? 'ماذا يقول عملاؤنا' : 'What Our Clients Say'}
+            {t('testimonials.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {isRTL 
-              ? 'اسمع من العلامات التجارية التي تواصلت بنجاح مع المستهلكين المسلمين من خلال حملات تسويق المؤثرين الحلال.'
-              : 'Hear from brands that have successfully connected with Muslim consumers through our halal influencer marketing campaigns.'
-            }
+            {t('testimonials.subtitle')}
           </p>
         </div>
 
@@ -115,7 +113,7 @@ export default function Testimonials() {
                     {testimonials[currentIndex].name}
                   </div>
                   <div className="text-gray-600">
-                    {testimonials[currentIndex].role} {isRTL ? 'في' : 'at'} {testimonials[currentIndex].company}
+                    {testimonials[currentIndex].role} {t('testimonials.at')} {testimonials[currentIndex].company}
                   </div>
                   <div className="text-sm text-gray-500">
                     📍 {testimonials[currentIndex].location}

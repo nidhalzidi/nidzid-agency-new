@@ -10,16 +10,16 @@ export default function Hero() {
   const isRTL = language === 'ar'
 
   const benefits = [
-    { icon: CheckCircle, text: isRTL ? 'معتمد 100% حلال' : '100% Halal-Certified' },
-    { icon: Users, text: isRTL ? '+500 مؤثر' : '500+ Influencers' },
-    { icon: Globe2, text: isRTL ? '+50 دولة' : '50+ Countries' },
+    { icon: CheckCircle, text: t('hero.benefits.halalCertified') },
+    { icon: Users, text: t('hero.benefits.influencers') },
+    { icon: Globe2, text: t('hero.benefits.countries') },
   ]
 
   const heroFeatures = [
-    { icon: '✓', text: isRTL ? 'مؤثرون معتمدون' : 'Verified Influencers' },
-    { icon: '✓', text: isRTL ? 'محتوى أصيل' : 'Authentic Content' },
-    { icon: '✓', text: isRTL ? 'حملات أخلاقية' : 'Ethical Campaigns' },
-    { icon: '✓', text: isRTL ? 'توافق الحلال' : 'Halal Compliance' },
+    { icon: '✓', text: t('hero.features.verifiedInfluencers') },
+    { icon: '✓', text: t('hero.features.authenticContent') },
+    { icon: '✓', text: t('hero.features.ethicalCampaigns') },
+    { icon: '✓', text: t('hero.features.halalCompliance') },
   ]
 
   return (
@@ -75,19 +75,19 @@ export default function Hero() {
             <div className={`flex flex-wrap justify-center lg:justify-start gap-8 mb-8 ${isRTL ? 'lg:justify-end' : ''}`}>
               <div className="text-center">
                 <div className="text-3xl font-bold text-[#1B4332]">500+</div>
-                <div className="text-sm text-gray-500">{isRTL ? 'مؤثر مسلم' : 'Muslim Influencers'}</div>
+                <div className="text-sm text-gray-500">{t('hero.stats.influencers')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-[#1B4332]">50M+</div>
-                <div className="text-sm text-gray-500">{isRTL ? 'وصول المستهلكين' : 'Consumer Reach'}</div>
+                <div className="text-sm text-gray-500">{t('hero.stats.reach')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-[#1B4332]">100+</div>
-                <div className="text-sm text-gray-500">{isRTL ? 'حملة ناجحة' : 'Successful Campaigns'}</div>
+                <div className="text-sm text-gray-500">{t('hero.stats.countries')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-[#D4AF37]">3.5x</div>
-                <div className="text-sm text-gray-500">ROI</div>
+                <div className="text-sm text-gray-500">{t('hero.stats.satisfaction')}</div>
               </div>
             </div>
 
@@ -118,10 +118,10 @@ export default function Hero() {
 
             {/* Trust Badge */}
             <div className={`mt-8 flex items-center justify-center lg:justify-start gap-4 text-sm text-gray-500 ${isRTL ? 'lg:justify-end flex-row-reverse' : ''}`}>
-              <span>{isRTL ? 'موثوق من:' : 'Trusted by:'}</span>
-              <span className="font-semibold text-gray-700">{isRTL ? 'أكثر من 100 علامة حلال' : '100+ Halal Brands'}</span>
+              <span>{t('hero.trustedBy')}</span>
+              <span className="font-semibold text-gray-700">{t('hero.trustedByValue')}</span>
               <span>•</span>
-              <span>{isRTL ? 'منذ 2024' : 'Since 2024'}</span>
+              <span>{t('hero.since')}</span>
             </div>
           </div>
 
@@ -132,10 +132,10 @@ export default function Hero() {
               <div className="text-center text-white">
                 <div className="text-7xl mb-6">🕌</div>
                 <div className="text-2xl font-bold text-[#D4AF37] mb-2">
-                  {isRTL ? 'معتمد 100% حلال' : '100% Halal-Certified'}
+                  {t('hero.halalCertified')}
                 </div>
                 <div className="text-lg opacity-90 mb-6">
-                  {isRTL ? 'تسويق متوافق مع الشريعة' : 'Shariah-Compliant Marketing'}
+                  {t('hero.shariahCompliant')}
                 </div>
                 
                 {/* Features */}
@@ -160,8 +160,8 @@ export default function Hero() {
                   <span className="text-2xl">✓</span>
                 </div>
                 <div className={isRTL ? 'text-right' : ''}>
-                  <div className="font-semibold text-[#1B4332]">{isRTL ? 'شريك موثوق' : 'Trusted Partner'}</div>
-                  <div className="text-sm text-gray-500">{isRTL ? 'أكثر من 500 مؤثر مسلم' : '500+ Muslim Influencers'}</div>
+                  <div className="font-semibold text-[#1B4332]">{t('hero.trustedPartner')}</div>
+                  <div className="text-sm text-gray-500">{t('hero.influencersCount')}</div>
                 </div>
               </div>
             </div>
@@ -169,14 +169,14 @@ export default function Hero() {
             {/* Floating Card 2 */}
             <div className="absolute -top-4 -right-4 bg-[#1B4332] rounded-xl shadow-xl p-4 text-white hidden lg:block">
               <div className="text-2xl font-bold text-[#D4AF37]">3.5x</div>
-              <div className="text-sm">{isRTL ? 'متوسط العائد' : 'Average ROI'}</div>
+              <div className="text-sm">{t('hero.averageROI')}</div>
             </div>
 
             {/* Floating Card 3 */}
             <div className="absolute top-1/2 -right-8 bg-white rounded-xl shadow-xl p-3 hidden xl:block">
               <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <div className="text-2xl">🌍</div>
-                <div className="text-sm font-medium text-[#1B4332]">{isRTL ? 'أكثر من 50 دولة' : '50+ Countries'}</div>
+                <div className="text-sm font-medium text-[#1B4332]">{t('hero.countriesCount')}</div>
               </div>
             </div>
           </div>

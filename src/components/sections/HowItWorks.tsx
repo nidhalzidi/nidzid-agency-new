@@ -13,38 +13,30 @@ export default function HowItWorks() {
     {
       number: '01',
       icon: MessageSquare,
-      title: isRTL ? 'مكالمة استكشافية' : 'Discovery Call',
-      description: isRTL 
-        ? 'نبدأ باستشارة مفصلة لفهم علامتك التجارية وأهدافك وجمهورك المستهدف وأهداف الحملة. هذا يساعدنا على خلق استراتيجية مخصصة لنجاحك.'
-        : 'We start with a detailed consultation to understand your brand, goals, target audience, and campaign objectives. This helps us create a tailored strategy for your success.',
-      duration: isRTL ? '30 دقيقة' : '30 min',
+      title: t('howItWorks.step1.title'),
+      description: t('howItWorks.step1.description'),
+      duration: t('howItWorks.step1.duration'),
     },
     {
       number: '02',
       icon: Search,
-      title: isRTL ? 'مطابقة المؤثرين' : 'Influencer Matching',
-      description: isRTL
-        ? 'يختار فريقنا بعناية المؤثرين من شبكتنا الموثقة الذين يتوافقون مع قيم علامتك ولديهم تفاعل حقيقي مع جمهورك المسلم المستهدف.'
-        : 'Our team carefully selects influencers from our verified network who align with your brand values and have authentic engagement with your target Muslim audience.',
-      duration: isRTL ? '1-2 أسبوع' : '1-2 weeks',
+      title: t('howItWorks.step2.title'),
+      description: t('howItWorks.step2.description'),
+      duration: t('howItWorks.step2.duration'),
     },
     {
       number: '03',
       icon: Users,
-      title: isRTL ? 'تنفيذ الحملة' : 'Campaign Execution',
-      description: isRTL
-        ? 'ندير كل جانب من جوانب حملتك من إنشاء المحتوى إلى جداول النشر. أنت توافق على كل المحتوى قبل نشره لضمان اتساق العلامة.'
-        : 'We manage every aspect of your campaign from content creation to posting schedules. You approve all content before it goes live, ensuring brand consistency.',
-      duration: isRTL ? '2-8 أسابيع' : '2-8 weeks',
+      title: t('howItWorks.step3.title'),
+      description: t('howItWorks.step3.description'),
+      duration: t('howItWorks.step3.duration'),
     },
     {
       number: '04',
       icon: BarChart,
-      title: isRTL ? 'التقارير والتحليل' : 'Reporting & Analysis',
-      description: isRTL
-        ? 'احصل على تقارير أداء مفصلة مع رؤى حول الوصول والتفاعل والتحويلات والعائد على الاستثمار. نقدم توصيات قابلة للتنفيذ للحملات المستقبلية.'
-        : 'Receive detailed performance reports with insights on reach, engagement, conversions, and ROI. We provide actionable recommendations for future campaigns.',
-      duration: isRTL ? 'مستمر' : 'Ongoing',
+      title: t('howItWorks.step4.title'),
+      description: t('howItWorks.step4.description'),
+      duration: t('howItWorks.step4.duration'),
     },
   ]
 
@@ -57,13 +49,10 @@ export default function HowItWorks() {
             {t('howItWorks.badge')}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-[#1B4332] mb-4">
-            {isRTL ? 'رحلتك نحو النجاح' : 'Your Journey to Success'}
+            {t('howItWorks.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {isRTL 
-              ? 'سهّلنا عملية تسويق المؤثرين لتسهيل تواصلك مع المستهلكين المسلمين بصدق.'
-              : 'We have streamlined the influencer marketing process to make it easy for you to connect with Muslim consumers authentically.'
-            }
+            {t('howItWorks.subtitle')}
           </p>
         </div>
 
@@ -118,16 +107,13 @@ export default function HowItWorks() {
         {/* CTA */}
         <div className="text-center mt-16">
           <p className="text-gray-600 mb-4">
-            {isRTL 
-              ? 'هل أنت مستعد للبدء في رحلة تسويق المؤثرين الحلال؟'
-              : 'Ready to start your halal influencer marketing journey?'
-            }
+            {t('howItWorks.cta')}
           </p>
           <Link
             href="#contact"
             className={`inline-flex items-center gap-2 px-8 py-4 bg-[#1B4332] hover:bg-[#2D6A4F] text-white font-semibold rounded-lg transition-colors ${isRTL ? 'flex-row-reverse' : ''}`}
           >
-            {isRTL ? 'حدد موعد مكالمة الاستكشاف المجانية' : 'Schedule Your Free Discovery Call'}
+            {t('howItWorks.ctaButton')}
             <ArrowRight className={`h-5 w-5 ${isRTL ? 'rotate-180' : ''}`} />
           </Link>
         </div>
