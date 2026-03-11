@@ -1,0 +1,26 @@
+{
+  "name": "NidZid Agency - Halal Influencer Marketing",
+  "short_name": "NidZid Agency",
+  "description": "The leading halal influencer marketing agency connecting brands with authentic Muslim consumers worldwide.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1B4332",
+  "theme_color": "#1B4332",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/nidzid-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/nidzid-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "marketing"],
+  "lang": "en",
+  "dir": "ltr"
+}
