@@ -6,7 +6,6 @@ import Industries from '@/components/sections/Industries'
 import HowItWorks from '@/components/sections/HowItWorks'
 import Stats from '@/components/sections/Stats'
 import Testimonials from '@/components/sections/Testimonials'
-import Partners from '@/components/sections/Partners'
 import FAQ from '@/components/sections/FAQ'
 import Contact from '@/components/sections/Contact'
 import Footer from '@/components/sections/Footer'
@@ -22,7 +21,6 @@ export default function Home() {
       <Industries />
       <HowItWorks />
       <Testimonials />
-      <Partners />
       <FAQ />
       <Contact />
       <Footer />
