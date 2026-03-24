@@ -8,7 +8,6 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { name, email, company, industry, budget, message, source } = body
 
-    // Validate required fields
     if (!name || !email || !message) {
       return NextResponse.json(
         { success: false, error: 'Missing required fields' },
@@ -77,12 +76,12 @@ export async function POST(request: NextRequest) {
           </table>
           <div style="margin-top: 20px; padding: 15px; background: #1B4332; border-radius: 6px;">
             <p style="color: #D4AF37; margin: 0; font-size: 14px;">
-              📧 Reply directly to: <a href="mailto:${email}" style="color: white;">${email}</a>
+              Reply to: <a href="mailto:${email}" style="color: white;">${email}</a>
             </p>
           </div>
         </div>
         <p style="color: #999; font-size: 12px; text-align: center; margin-top: 20px;">
-          Sent from nidzid.site contact form • ${new Date().toLocaleString('en-US', { timeZone: 'Africa/Tunis' })} (Tunisia time)
+          Sent from nidzid.site contact form
         </p>
       </body>
       </html>
@@ -91,7 +90,7 @@ export async function POST(request: NextRequest) {
     const { data, error } = await resend.emails.send({
       from: 'NidZid Agency <onboarding@resend.dev>',
       to: ['nidhalzidi@gmail.com'],
-      replyTo: email,
+      reply_to: email,
       subject: `New inquiry from ${name} - ${company || 'NidZid Agency Website'}`,
       html: emailHtml,
     })
@@ -99,17 +98,13 @@ export async function POST(request: NextRequest) {
     if (error) {
       console.error('Resend error:', error)
       return NextResponse.json(
-        { success: false, error: error.message },
+        { success: false, error: 'Failed to send email' },
         { status: 500 }
       )
     }
 
-    console.log('Email sent successfully:', data?.id)
-    return NextResponse.json({ 
-      success: true, 
-      message: 'Email sent successfully',
-      id: data?.id
-    })
+    console.log('Email sent:', data?.id)
+    return NextResponse.json({ success: true, message: 'Email sent successfully' })
 
   } catch (error) {
     console.error('Contact API error:', error)
