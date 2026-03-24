@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -8,10 +9,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "NidZid Agency | Halal Influencer Marketing Agency",
-  description: "Connect with Muslim consumers authentically through halal influencer marketing. We help Islamic brands reach the $2 trillion global Muslim consumer market through authentic influencer partnerships and Shariah-compliant marketing strategies.",
+  description: "Connect with Muslim consumers authentically through halal influencer marketing. We help Islamic brands reach the $2 trillion global Muslim consumer market through authentic influencer partnerships and Shariah-compliant campaigns.",
   keywords: [
     "halal marketing",
-    "Muslim influencers", 
+    "Muslim influencers",
     "Islamic marketing",
     "halal advertising",
     "influencer marketing agency",
@@ -30,21 +31,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
     languages: {
-      "en-US": "/",
-      "ar-SA": "/?lang=ar",
-      "fr-FR": "/?lang=fr",
-      "ms-MY": "/?lang=ms",
-      "id-ID": "/?lang=id",
+      "en-US": "/en",
+      "ar": "/ar",
     },
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    alternateLocale: ["ar_SA", "fr_FR", "ms_MY", "id_ID"],
     url: "https://nidzid.site",
-    siteName: "NidZid Agency",
     title: "NidZid Agency | Halal Influencer Marketing Agency",
-    description: "Connect with Muslim consumers authentically through halal influencer marketing. We help Islamic brands reach the $2 trillion global Muslim consumer market.",
+    description: "Connect with Muslim consumers authentically through halal influencer marketing.",
+    siteName: "NidZid Agency",
     images: [
       {
         url: "/nidzid-logo.png",
@@ -59,7 +56,6 @@ export const metadata: Metadata = {
     title: "NidZid Agency | Halal Influencer Marketing Agency",
     description: "Connect with Muslim consumers authentically through halal influencer marketing.",
     images: ["/nidzid-logo.png"],
-    creator: "@nidzid_agency",
   },
   robots: {
     index: true,
@@ -92,9 +88,10 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <LanguageProvider>
           {children}
-                    <Analytics />
+          <Analytics />
+          <SpeedInsights />
         </LanguageProvider>
       </body>
     </html>
-  );
+  )
 }
