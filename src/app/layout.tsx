@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   authors: [{ name: "NidZid Agency" }],
   creator: "NidZid Agency",
   publisher: "NidZid Agency",
-  metadataBase: new URL("https://nidzid-halal-agency.vercel.app"),
+  metadataBase: new URL("https://nidzid.site"),
   alternates: {
     canonical: "/",
     languages: {
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     alternateLocale: ["ar_SA", "fr_FR", "ms_MY", "id_ID"],
-    url: "https://nidzid-halal-agency.vercel.app",
+    url: "https://nidzid.site",
     siteName: "NidZid Agency",
     title: "NidZid Agency | Halal Influencer Marketing Agency",
     description: "Connect with Muslim consumers authentically through halal influencer marketing. We help Islamic brands reach the $2 trillion global Muslim consumer market.",
