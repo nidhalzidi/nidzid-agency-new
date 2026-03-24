@@ -89,7 +89,7 @@ export async function POST(request: NextRequest) {
 
     const { data, error } = await resend.emails.send({
       from: 'NidZid Agency <onboarding@resend.dev>',
-      to: ['nidhalzidi@gmail.com'],
+      to: ['zidinidhal7@gmail.com'],
       reply_to: email,
       subject: `New inquiry from ${name} - ${company || 'NidZid Agency Website'}`,
       html: emailHtml,
@@ -105,7 +105,6 @@ export async function POST(request: NextRequest) {
 
     console.log('Email sent:', data?.id)
     return NextResponse.json({ success: true, message: 'Email sent successfully' })
-
   } catch (error) {
     console.error('Contact API error:', error)
     return NextResponse.json(
