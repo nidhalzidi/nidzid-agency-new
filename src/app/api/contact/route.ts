@@ -89,7 +89,7 @@ export async function POST(request: NextRequest) {
 
     const { data, error } = await resend.emails.send({
       from: 'NidZid Agency <contact@nidzid.site>',
-      to: ['zidinidhal7@gmail.com'],
+      to: ['nidhalzidi@nidzid.site'],
       reply_to: email,
       subject: `New inquiry from ${name} - ${company || 'NidZid Agency Website'}`,
       html: emailHtml,
