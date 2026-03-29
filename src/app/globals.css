@@ -5,15 +5,33 @@
 :root {
   --primary: #1B4332;
   --primary-foreground: #ffffff;
+  --primary-hover: #2D6A4F;
   --accent: #D4AF37;
   --accent-foreground: #1B4332;
+  --accent-hover: #B8942C;
 }
 
+/* Base styles - inlined for critical rendering */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Custom scrollbar */
+/* Improve text rendering performance */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom scrollbar - non-critical, can be lazy loaded */
+@supports (scrollbar-width: thin) {
+  :root {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) #f1f1f1;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -25,18 +43,82 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1B4332;
+  background: var(--primary);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2D6A4F;
+  background: var(--primary-hover);
 }
 
-/* Gold gradient text */
+/* Gold gradient text - used sparingly */
 .text-gradient-gold {
-  background: linear-gradient(135deg, #D4AF37 0%, #E8C969 50%, #D4AF37 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, #E8C969 50%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Smooth animations - respect user preferences */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* RTL support */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+}
+
+/* Optimize image rendering */
+img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Prevent layout shift from fonts */
+.font-loaded {
+  font-display: swap;
 }
