@@ -1,0 +1,8 @@
+node_modules/
+.next/
+bun.lock
+upload/
+download/
+.env
+.env.local
+.vercel
