@@ -18,22 +18,28 @@ export const viewport: Viewport = {
   themeColor: "#1B4332",
 };
 
+// Optimized meta description: 153 characters (within 150-160 optimal range)
+const META_DESCRIPTION = "Reach the $2 trillion Muslim market through halal influencer marketing. Shariah-compliant campaigns for Islamic brands. 500+ verified Muslim influencers.";
+
+// Shorter description for Open Graph (under 125 chars for optimal display)
+const OG_DESCRIPTION = "Halal influencer marketing agency connecting brands with Muslim consumers. 500+ verified influencers, Shariah-compliant campaigns.";
+
 export const metadata: Metadata = {
   title: "NidZid Agency | Halal Influencer Marketing Agency",
-  description: "Connect with Muslim consumers authentically through halal influencer marketing. We help Islamic brands reach the $2 trillion global Muslim consumer market through authentic influencer partnerships and Shariah-compliant marketing strategies.",
+  description: META_DESCRIPTION,
   keywords: [
-    "halal marketing",
+    "halal influencer marketing",
     "Muslim influencers", 
+    "halal marketing agency",
     "Islamic marketing",
-    "halal advertising",
-    "influencer marketing agency",
     "Shariah compliant marketing",
-    "halal brand marketing",
+    "halal advertising",
     "Muslim consumer market",
     "Islamic finance marketing",
     "halal food marketing",
     "modest fashion marketing",
-    "Muslim travel marketing"
+    "halal brand marketing",
+    "influencer marketing agency",
   ],
   authors: [{ name: "NidZid Agency" }],
   creator: "NidZid Agency",
@@ -56,7 +62,7 @@ export const metadata: Metadata = {
     url: "https://nidzid.site",
     siteName: "NidZid Agency",
     title: "NidZid Agency | Halal Influencer Marketing Agency",
-    description: "Connect with Muslim consumers authentically through halal influencer marketing. We help Islamic brands reach the $2 trillion global Muslim consumer market.",
+    description: OG_DESCRIPTION,
     images: [
       {
         url: "/nidzid-logo.png",
@@ -69,9 +75,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "NidZid Agency | Halal Influencer Marketing Agency",
-    description: "Connect with Muslim consumers authentically through halal influencer marketing.",
+    description: OG_DESCRIPTION,
     images: ["/nidzid-logo.png"],
     creator: "@nidzid_agency",
+    site: "@nidzid_agency",
   },
   robots: {
     index: true,
@@ -108,17 +115,10 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://vercel.com" />
         
         {/* Favicon and app icons */}
-        <link rel="icon" href="/nidzid-logo.png" />
+        <link rel="icon" href="/nidzid-logo.png" sizes="any" />
         <link rel="apple-touch-icon" href="/nidzid-logo.png" />
         <meta name="theme-color" content="#1B4332" />
-        
-        {/* Preload critical images for LCP */}
-        <link 
-          rel="preload" 
-          as="image" 
-          href="/hero-image.png" 
-          fetchPriority="high"
-        />
+        <meta name="format-detection" content="telephone=no" />
         
         {/* Critical inline styles for above-the-fold content */}
         <style

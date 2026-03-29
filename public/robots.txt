@@ -1,12 +1,17 @@
 # Robots.txt for NidZid Agency
-# https://nidzid-halal-agency.vercel.app
+# https://nidzid.site
 
+# Google
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
+# Bing
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
+# Social Media Crawlers
 User-agent: Twitterbot
 Allow: /
 
@@ -16,8 +21,46 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-User-agent: *
+User-agent: Pinterest
 Allow: /
 
+# AI Crawlers (for AI/GEO optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Omgili
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# All other bots
+User-agent: *
+Allow: /
+Crawl-delay: 2
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
 # Sitemap
-Sitemap: https://nidzid-halal-agency.vercel.app/sitemap.xml
+Sitemap: https://nidzid.site/sitemap.xml
+
+# Host directive
+Host: nidzid.site
