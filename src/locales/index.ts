@@ -163,7 +163,7 @@ export default {
       },
       globalNetwork: {
         title: 'Global Network',
-        description: 'Access to 500+ verified Muslim influencers across Instagram, TikTok, YouTube, LinkedIn, spanning 50+ countries.',
+        description: 'Access to 500+ verified Muslim influencers across Instagram, TikTok, YouTube, X, and LinkedIn spanning Saudi Arabia, Europe (UK, France, Germany, Italy, Spain, Netherlands), North America, Turkey & Southeast Asia.',
       },
       shariahCompliant: {
         title: 'Shariah-Compliant',
@@ -570,8 +570,8 @@ export default {
         subtitle: 'Serving clients across multiple regions from our strategic offices',
         tunisiaOffice: 'Tunisia Office',
         uaeOffice: 'UAE Office',
-        servingNA: 'Serving North Africa & Europe',
-        servingGCC: 'Serving GCC & Asia',
+        servingNA: 'Serving North Africa & Europe (UK, France, Germany, Italy, Spain, Netherlands)',
+        servingGCC: 'Serving Saudi Arabia, Turkey & Southeast Asia',
       },
       cta: {
         title: 'Ready to Partner with Us?',
@@ -765,7 +765,7 @@ export default {
       },
       globalNetwork: {
         title: 'شبكة عالمية',
-        description: 'الوصول إلى أكثر من 500 مؤثر مسلم تم التحقق منه عبر Instagram وTikTok وYouTube وLinkedIn، في أكثر من 50 دولة.',
+        description: 'الوصول إلى أكثر من 500 مؤثر مسلم ذكر تم التحقق منه عبر Instagram وTikTok وYouTube وX وLinkedIn في السعودية وأوروبا (بريطانيا، فرنسا، ألمانيا، إيطاليا، إسبانيا، هولندا) وأمريكا الشمالية وتركيا وجنوب شرق آسيا.',
       },
       shariahCompliant: {
         title: 'متوافق مع الشريعة',
@@ -1164,8 +1164,8 @@ export default {
         subtitle: 'خدمة العملاء عبر مناطق متعددة من مكاتبنا الاستراتيجية',
         tunisiaOffice: 'مكتب تونس',
         uaeOffice: 'مكتب الإمارات',
-        servingNA: 'خدمة شمال إفريقيا وأوروبا',
-        servingGCC: 'خدمة الخليج وآسيا',
+        servingNA: 'خدمة شمال إفريقيا وأوروبا (بريطانيا، فرنسا، ألمانيا، إيطاليا، إسبانيا، هولندا)',
+        servingGCC: 'خدمة السعودية وتركيا وجنوب شرق آسيا',
       },
       cta: {
         title: 'هل أنت مستعد للشراكة معنا؟',
